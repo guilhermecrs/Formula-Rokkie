@@ -2,7 +2,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url("/img/img_fundo.jpg");
+    background-image: url("/img_/img_fundo.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover; /*Garante que a imagem não seja quebrada pela section*/
