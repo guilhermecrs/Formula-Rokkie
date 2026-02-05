@@ -2,7 +2,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url("../img/img_fundo.jpg");
+    background-image: url("/img/img_fundo.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover; /*Garante que a imagem não seja quebrada pela section*/
@@ -13,7 +13,7 @@ body{
     position:relative;/*Necessário para o fundo transparente*/
     
 }
-body ::before{/*Camada sobreposta da imagem*/
+body::before {/*Camada sobreposta da imagem*/
  content:"";/*Necessário para os codigos seguintes funcionarem*/
  position: fixed;
  top: 0;
