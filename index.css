@@ -1,40 +1,56 @@
 
 body{
-    margin: 0;
-    padding: 0;
-    background-image: url("img/img_fundo.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover; /*Garante que a imagem não seja quebrada pela section*/
-    background-position: center;
-    max-width: 100%;
-    background-attachment: scroll; /*Imagem acompanha de acordo com a barra de navegação*/
-    min-height: 100vh;
-    position:relative;/*Necessário para o fundo transparente*/
-    
+margin: 0;
+padding: 0;
+background-image: url("img/img_fundo.jpg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover; /*Garante que a imagem não seja quebrada pela section*/
+background-position: center;
+max-width: 100%;
+background-attachment: scroll; /*Imagem acompanha de acordo com a barra de navegação*/
+min-height: 100vh;
+position:relative;/*Necessário para o fundo transparente*/
 }
 body ::before {/*Camada sobreposta da imagem*/
- content:"";/*Necessário para os codigos seguintes funcionarem*/
- position: fixed;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
- background-color: rgba(0, 0, 0, 0.178);
- z-index: -1; /* deixa atrás do conteúdo o fundo */
+content:"";/*Necessário para os codigos seguintes funcionarem*/
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.178);
+z-index: -1; /* deixa atrás do conteúdo o fundo */
 }
 
-.cabecalho{
-    font-size: 28px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 75px;
-    background-color: brown;
-    border-top: none;
+.container{
+padding:15px;
+box-shadow: #ff0000;
 }
+.Login{
+position: absolute;
+right: 45px;
+margin-top: -5px;
+text-shadow: 1px 1px 0px rgb(0, 0, 0);
+color: #ff0000;
+font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-size: 18px;
+font-weight: bold;
+text-shadow: 0 0 10px red; /*Deixar uma sombra atrás do texto*/
+}
+ul{
+display: flex;
+gap: 225px ;
+list-style: none;
+font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-size: 18px; /*Aumenta o tamanho da font*/
+color: #ff0000;
+font-weight: bold;
+text-shadow: 0 0 10px red;
+}
+
 .primeirasecao{
-    color: red;
+    color: #ff0000;
     text-align: center;
     width: 60%; /* Largura de 80% do contêiner pai */
     height: 150px; /*Aqui define  o tamnaho do container*/
@@ -72,7 +88,7 @@ body ::before {/*Camada sobreposta da imagem*/
     }
     
 
-    
+
 }
 
 
