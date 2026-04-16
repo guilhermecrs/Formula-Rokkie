@@ -37,7 +37,9 @@ body::before {/*Camada sobreposta da imagem*/
     /*has funciona como um sensor inteligente, ao passar o mouse em cima dos elementos do site ele entende que a imagem de traz pode clarear para dar o foco ao item*/
     body:has(.gridequipes:hover)::before,
     body:has(.primeirasecao:hover)::before,
-    body:has(ul li:hover)::before {
+    body:has(ul li:hover)::before,
+    body:has(.gridpilotos:hover)::before
+    {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -173,28 +175,27 @@ ul{/*Aqui ficaram a parte de títulos*/
     word-break: break-all;  /* Força a quebra em cada letra */
     line-height: 0.8;      /* Ajusta o espaço entre as letras empilhadas */
     letter-spacing: normal; /* RESETE ISSO (o -100em estava sumindo com o texto) */
-    
-    /* 2. Posicionamento na lateral */
+    width: 20px;
     position: absolute;
     top: 50%;
     left: 20px;           
     transform:translateY(80px); 
     opacity: 0;
     transition: opacity 0.5s ease, transform 0.8s ease;
-    pointer-events: none;
-    color: #000000;
-    text-shadow: 0px 0px 10px rgba(0,0,0,0.3); 
+    color: #1A1A1A;
+    text-shadow: 0px 0px 50px #000000;
     font-family: "Orbitron", sans-serif;
     font-style: italic;
     font-size: 15px;
     text-transform: uppercase;
-    font-weight: bold;
-    justify-content: center;
+    text-align: center;
+    
+    
 }
 
 .gridpilotos:hover .titulopilotos {
     opacity: 1;
-    /* Faz o texto subir suavemente para a posição central ao aparecer */
     transform: translateY(-100px);
+    
 }
 
