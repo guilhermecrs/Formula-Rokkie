@@ -1,201 +1,243 @@
-@font-face{/*Importador de fontes*/
-    font-family: "Orbitron";
-    src: url("/Fonts/Orbitron-Regular.ttf") format("truetype");   
+@font-face {
+  /*Importador de fontes*/
+  font-family: "Orbitron";
+  src: url("/Fonts/Orbitron-Regular.ttf") format("truetype");
 }
 
-@font-face{/*Importador de fontes*/
-    font-family: "Exo2";
-    src: url("/Fonts/Exo2-Regular.otf") format("opentype");
+@font-face {
+  font-family: "Exo2";
+  src: url("/Fonts/Exo2-Regular.otf") format("opentype");
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    background-image: url("img/img_fundo.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover; /*Garante que a imagem não seja quebrada pela section*/ 
-    background-position: center;
-    max-width: 100%;
-    background-attachment: scroll; /*Imagem acompanha de acordo com a barra de navegação*/
-    min-height: 100vh;
-    position:relative;/*Necessário para o fundo transparente*/
-    z-index: 0;
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("img/img_fundo.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; /*Garante que a imagem não seja quebrada pela section*/
+  background-position: center;
+  max-width: 100%;
+  background-attachment: scroll; /*Imagem acompanha de acordo com a barra de navegação*/
+  min-height: 100vh;
+  position: relative; /*Necessário para o fundo transparente*/
+  z-index: 0;
 }
 
-body::before {/*Camada sobreposta da imagem*/
-    content:"";/*Necessário para os codigos seguintes funcionarem*/
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* deixa atrás do conteúdo o fundo */
-    background-color: rgba(0, 0, 0, 0.7);/*Parte de deixar a imagem de fundo levemente escura*/
-    transition: background-color 0.6s ease;/*Efeito de transição ao passar nos elementos*/
+body::before {
+  /*Camada sobreposta da imagem*/
+  content: ""; /*Necessário para os codigos seguintes funcionarem*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* deixa atrás do conteúdo o fundo */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /*Parte de deixar a imagem de fundo levemente escura*/
+  transition: background-color 0.8s ease; /*Efeito de transição ao passar nos elementos o "ease" serve para setar o timing de transição e deixando-a mais suave*/
 }
-    /*has funciona como um sensor inteligente, ao passar o mouse em cima dos elementos do site ele entende que a imagem de traz pode clarear para dar o foco ao item*/
-    body:has(.gridequipes:hover)::before,
-    body:has(.primeirasecao:hover)::before,
-    body:has(ul li:hover)::before,
-    body:has(.gridpilotos:hover)::before
-    {
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-.container{ /*Header, posicionamento*/
-padding:15px;
-text-shadow: 0 0 8px #ffffff;
-}
-
-ul{/*Aqui ficaram a parte de títulos*/
-    display: flex;
-    gap: 180px ;
-    list-style: none;
-    font-size: 18px;
-    font-style:italic ; /*Aumenta o tamanho da font*/
-    color: #ffffff;
-    text-shadow: 0 0 8px #ffffff;
-    font-family:"Orbitron", sans-serif;
-    white-space: nowrap;
+/*has funciona como um sensor inteligente, ao passar o mouse em cima dos elementos do site ele entende que a imagem de traz pode clarear para dar o foco ao item*/
+body:has(.gridequipes:hover)::before,
+body:has(.primeirasecao:hover)::before,
+body:has(ul li:hover)::before,
+body:has(.gridpilotos:hover)::before,
+body:has(.CardCarros:hover)::before {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
-.primeirasecao{
-    text-align: center;
-    width: 60%; /* Largura de 80% do contêiner pai */
-    height: 150px; /*Aqui define  o tamnaho do container*/
-    background-color: rgba(0, 0, 0, 0.178); 
-    padding: 40px; /*Define o comprimeiro dele ao decorrer do site*/  
-    margin: 20px auto; /*Centraliza o container no site*/
-    border: 2px solid #95B3BF; 
-    box-shadow: 0 4px 8px #95B3BF; 
-    border-radius: 5px 30px 5px 30px;
-    display: flex;
-    justify-content: center;   
-    transition: transform 0.3s; /* Transição suave ao passar o mouse */
-    flex-wrap: wrap;
-    line-height: 1.6;/*Serve para definir o espaçamento entre linhas*/
-}
-.primeirasecao:hover{ /*Necessário para o destaque do cartão*/
-    transform: translateY(-5px); /* Eleva o cartão ao passar o mouse */
-}
-.titulo_apresentacao{
- font-family:"Orbitron", sans-serif;
- font-size: 22px;
- font-style: italic;
- color: #F20505;
-}
-.texto1{
-    color: #ffffff;
-    font-size: 18px;
-    text-align: left;
-    text-align: center;
-    font-family:"Exo2", sans-serif;
-}
-@media screen and (max-width: 1708px){
-    .primeirasecao{
-        height: auto;
-        width: 85vw;
-    }
-    .texto1{
-        font-size: 15px;
-    }
-    .cabecalho{
-        font-size: 25px;
-    }
+.menuopcoes{
+  /*Header, posicionamento*/
+    padding: 15px;
 }
 
-.Cards{
-    display: flex;/*Para os cards ficarem ao lado um do outro*/
-    flex-wrap: wrap;/*Se não couber na tela joga para linha abaixo*/
+ul {
+  /*Aqui ficaram a parte de títulos*/
+  list-style: none;
+  font-size: 18px;
+  font-style: italic; 
+  color: #ffffff;
+  text-shadow: 0 0 8px #ffffff;
+  font-family: "Orbitron", sans-serif;
+  justify-content: space-around;
+  white-space: nowrap;
+  display: flex;
 }
 
-.gridequipes{
-    width: 350px;
-    height: 200px;
-    margin: 80px;
-    transition: transform 0.4s;
-    border: 1px solid #95B3BF;    
-    background-image:url("img/UnmPkH.jpg");
-    background-size:cover;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden; /*Item útil para não escapar bordas pretas*/
-    border-radius: 5px 30px 5px 30px;
+.primeirasecao {
+  text-align: center;
+  width: 60%; /* Largura de 80% do contêiner pai */
+  height: 150px; /*Aqui define  o tamnaho do container*/
+  background-color: rgba(0, 0, 0, 0.178);
+  padding: 40px; /*Define o comprimeiro dele ao decorrer do site*/
+  margin: 20px auto; /*Centraliza o container no site*/
+  border: 2px solid #95b3bf;
+  box-shadow: 0 4px 8px #95b3bf;
+  border-radius: 5px 30px 5px 30px;
+  display: flex;
+  justify-content: center;
+  transition: transform 0.3s; /* Transição suave ao passar o mouse */
+  flex-wrap: wrap;
+  line-height: 1.6; /*Serve para definir o espaçamento entre linhas*/
+}
+.primeirasecao:hover {
+  /*Necessário para o destaque do cartão*/
+  transform: translateY(-5px); /* Eleva o cartão ao passar o mouse */
+}
+.titulo_apresentacao {
+  font-family: "Orbitron", sans-serif;
+  font-size: 22px;
+  font-style: italic;
+  color: #f20505;
+}
+.texto1 {
+  color: #ffffff;
+  font-size: 18px;
+  text-align: left;
+  text-align: center;
+  font-family: "Exo2", sans-serif;
+}
+@media screen and (max-width: 1708px) {
+  /*Código para deixar responsivo*/
+  .primeirasecao {
+    height: auto;
+    width: 85vw;
+  }
+  .texto1 {
+    font-size: 15px;
+  }
+  .cabecalho {
+    font-size: 25px;
+  }
 }
 
-.gridequipes:hover{
-    transform: translateY(-15px);
-    box-shadow: 0 15px 20px #95B3BF;
-    z-index: 10;
-}
-.gridequipes:hover .titulogrid{/*Serve para o texto aparecer de forma com transição*/
-    opacity: 1;
-    transform: translateY(0);
+.Cards {
+  display: flex; /*Para os cards ficarem ao lado um do outro*/
+  flex-wrap: wrap; /*Se não couber na tela joga para linha abaixo*/
+  gap: 110px; /*Distânciar os Cards*/
+  justify-content:center;/*Centraliza-los*/
+  margin: 60px;/*Descer os cards*/
 }
 
-.titulogrid{
-    text-align: center;
-    padding-top: 5px;
-    opacity: 0;
-    transform: translateY(80px);
-    transition: opacity 0.5s ease, transform 0.8s ease;
-    pointer-events: none;
-    background: none;
-    color: #1A1A1A;
-    font-family:"Orbitron", sans-serif;
-    font-style: italic;
-    text-shadow: 0px 0px 20px #000000;
-    
+.gridequipes {
+  width: 350px;
+  height: 200px;
+  transition: transform 0.4s;
+  border: 1px solid #95b3bf;
+  background-image: url("img/UnmPkH.jpg");
+  background-size: cover;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden; /*Item útil para não escapar bordas pretas*/
+  border-radius: 5px 30px 5px 30px;
 }
 
-.gridpilotos{
-    width: 350px;
-    height: 200px;
-    margin: 80px;
-    transition: transform 0.4s;
-    border: 1px solid #F20505;    
-    background-image:url("img/Capa_GridPilotos.jpg");
-    background-size:cover;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden; /*Item útil para não escapar bordas pretas*/
-    border-radius: 5px 30px 5px 30px;
+.gridequipes:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 15px 20px #95b3bf;
+  z-index: 10;
 }
-.gridpilotos:hover{
-    transform: translateY(-15px);
-    box-shadow: 0 15px 20px #F2BB16;
-    z-index: 10;
+.gridequipes:hover .titulogrid {
+  /*Serve para o texto aparecer de forma com transição*/
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.titulogrid {
+  text-align: center;
+  padding-top: 5px;
+  opacity: 0;
+  transform: translateY(80px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.8s ease;
+  pointer-events: none;
+  background: none;
+  color: #1a1a1a;
+  font-family: "Orbitron", sans-serif;
+  font-style: italic;
+  text-shadow: 0px 0px 20px #000000;
+}
+
+.gridpilotos {
+  width: 350px;
+  height: 200px;
+  transition: transform 0.4s;
+  border: 1px solid #f2bb16;
+  background-image: url("img/Capa_GridPilotos.jpg");
+  background-size: cover;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden; /*Item útil para não escapar bordas pretas*/
+  border-radius: 5px 30px 5px 30px;
+}
+.gridpilotos:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 15px 20px #f2bb16;
+  z-index: 10;
 }
 
 .titulopilotos {
-    /* 1. O segredo para empilhar */
-    display: block;
-    width: 10px;           /* Largura mínima força a letra a cair */
-    word-break: break-all;  /* Força a quebra em cada letra */
-    line-height: 0.8;      /* Ajusta o espaço entre as letras empilhadas */
-    letter-spacing: normal; /* RESETE ISSO (o -100em estava sumindo com o texto) */
-    width: 20px;
-    position: absolute;
-    top: 50%;
-    left: 20px;           
-    transform:translateY(80px); 
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.8s ease;
-    color: #1A1A1A;
-    text-shadow: 0px 0px 50px #000000;
-    font-family: "Orbitron", sans-serif;
-    font-style: italic;
-    font-size: 15px;
-    text-transform: uppercase;
-    text-align: center;
-    
-    
+  display: block;
+  line-height: 0.8; /* Ajusta o espaço entre as letras empilhadas */
+  width: 20px;
+  position: absolute;
+  top: 50%; /*Necessário para deixar no meio do container*/
+  left: 20px;
+  transform: translateY(80px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.8s ease;
+  opacity: 0;
+  font-family: "Orbitron", sans-serif;
+  font-style: italic;
+  font-size: 15px;
+  text-transform: uppercase; /*Transforma letras minúsculas em maiúsculas*/
+  text-align: center;
+  font-weight: 900;
+  color: #1a1a1a;
+  text-shadow: 0px 0px 20px #f30000;
 }
 
 .gridpilotos:hover .titulopilotos {
-    opacity: 1;
-    transform: translateY(-100px);
-    
+  opacity: 1;
+  transform: translateY(-100px);
 }
 
+.CardCarros {
+  width: 350px;
+  height: 200px;
+  transition: transform 0.4s;
+  border: 1px solid #f20505;
+  background-image: url("/img/Capa_Carros.jpg");
+  background-size: cover;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden; /*Item útil para não escapar bordas pretas*/
+  border-radius: 5px 30px 5px 30px;
+}
+.CardCarros:hover {
+  transform: translateY(-15px);
+  z-index: 10px;
+  box-shadow: 0 15px 20px #f20505;
+}
+
+.tituloCarros {
+  font-family: "Orbitron", sans-serif;
+  text-align: center;
+  color: #000000;
+  text-shadow: 0px 0px 15px #ffffff;
+  transform: translateY(80px);
+  transition:
+    opacity ease 0.5s,
+    transform ease 0.8s;
+  opacity: 0;
+}
+.CardCarros:hover .tituloCarros {
+  opacity: 1;
+  transform: translateY(0);
+}
