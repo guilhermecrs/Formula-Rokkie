@@ -50,16 +50,16 @@ body:has(.CardCarros:hover)::before {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.menuopcoes{
+.menuopcoes {
   /*Header, posicionamento*/
-    padding: 15px;
+  padding: 15px;
 }
 
 ul {
   /*Aqui ficaram a parte de títulos*/
   list-style: none;
   font-size: 18px;
-  font-style: italic; 
+  font-style: italic;
   color: #ffffff;
   text-shadow: 0 0 8px #ffffff;
   font-family: "Orbitron", sans-serif;
@@ -119,8 +119,8 @@ ul {
   display: flex; /*Para os cards ficarem ao lado um do outro*/
   flex-wrap: wrap; /*Se não couber na tela joga para linha abaixo*/
   gap: 110px; /*Distânciar os Cards*/
-  justify-content:center;/*Centraliza-los*/
-  margin: 60px;/*Descer os cards*/
+  justify-content: center; /*Centraliza-los*/
+  margin: 60px; /*Descer os cards*/
 }
 
 .gridequipes {
