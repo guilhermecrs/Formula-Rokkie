@@ -214,7 +214,7 @@ ul {
   height: 200px;
   transition: transform 0.4s;
   border: 1px solid #f20505;
-  background-image: url("/img/Capa_Carros.jpg");
+  background-image: url("img/Capa_Carros.jpg");
   background-size: cover;
   position: relative;
   cursor: pointer;
@@ -248,7 +248,7 @@ ul {
   height: 200px;
   border: 1px solid #000000;
   border-radius: 5px 30px 5px 30px;
-  background-image: url("/img/Grid_Wallpapers.jpg");
+  background-image: url("img/Grid_Wallpapers.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
