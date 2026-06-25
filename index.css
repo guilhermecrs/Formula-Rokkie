@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "Exo2";
-  src: url("/Fonts/Exo2-Regular.otf") format("opentype");
+  src: url("Fonts/Exo2-Regular.otf") format("opentype");
 }
 
 body {
